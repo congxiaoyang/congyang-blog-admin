@@ -1,0 +1,29 @@
+html,body{
+  height: 100%;
+  background-color: #f3f3f4;
+}
+
+.sideMenu{
+  position: fixed;
+  left: 0;
+}
+.container{
+  margin-left: 260px;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding-bottom: 20px;
+}
+
+.ivu-breadcrumb{
+  margin-bottom: 20px;
+}
+
+.my-card{
+  background-color: #fff;
+}
+.my-card .title{
+  font-size: 16px;
+  border-top: 3px solid #e7eaec;
+  border-bottom: 1px solid #e7eaec;
+  padding: 14px;
+}

@@ -53,8 +53,12 @@
     methods: {
       handleSubmit(name) {
         this.$refs[name].validate((valid) => {
-          if (valid) {
-            this.$Message.success('Success!');
+          if (valid) { // 通过验证
+            // this.$Message.success('Success!');
+            $http.post('',function () {
+
+            })
+
           } else {
             this.$Message.error('Fail!');
           }

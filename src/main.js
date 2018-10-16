@@ -3,12 +3,14 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
+import axios from 'axios';
 import iView from 'iview';
 import 'iview/dist/styles/iview.css';
 import './assets/css/public.css';
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 Vue.use(iView);
+Vue.prototype.$http = axios;
 
 /* eslint-disable no-new */
 new Vue({

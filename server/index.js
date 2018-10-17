@@ -3,6 +3,7 @@ const bodyParser = require('body-parser'); // post 时需要
 const express = require('express');
 const app = express();
 
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 // 后端api接口

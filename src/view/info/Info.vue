@@ -51,13 +51,21 @@
       }
     },
     methods: {
-      handleSubmit(name) {
-        this.$refs[name].validate((valid) => {
-          if (valid) { // 通过验证
-            // this.$Message.success('Success!');
-            $http.post('',function () {
 
-            })
+      handleSubmit(name) {
+          this.$refs[name].validate((valid) => {
+          if (valid) { // 通过验证
+            var vm = this;
+            this.$http.post('/api/changeInfo',vm.$qs.stringify({
+              name: vm.formCustom.name,
+              intro: vm.formCustom.intro
+            }))
+              .then((res) => {
+                var res = res.data;
+                if(res.status == 'ok'){
+                  vm.$Message.success(res.msg);
+                }
+              })
 
           } else {
             this.$Message.error('Fail!');
@@ -67,6 +75,14 @@
       handleReset(name) {
         this.$refs[name].resetFields();
       }
+    },
+    mounted:function () {
+      this.$http.get('/api/getInfo',{params:{id:0}})
+        .then((res)=>{
+           var res = res.data;
+           this.formCustom.name = res[0].name;
+           this.formCustom.intro = res[0].intro;
+        })
     }
   }
 </script>

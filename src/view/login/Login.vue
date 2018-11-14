@@ -55,7 +55,6 @@
                 .then((res)=>{
                   _this.loginBtnLoading = false;
                    if(res.data.status == 'ok'){
-                     alert(1);
                      _this.$router.push({path:'/main/home'})
                    }else{
                      _this.$Message.error(res.data.msg)

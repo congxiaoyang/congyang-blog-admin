@@ -9,7 +9,7 @@
           <Icon type="ios-home" size="18" />
           首页
         </MenuItem>
-        <MenuItem name="Info" to="/info">
+        <MenuItem name="Info" to="/main/info">
           <Icon type="ios-happy" size="18" />
           个人信息
         </MenuItem>
@@ -18,8 +18,8 @@
             <Icon type="ios-paper" size="18" />
             博客
           </template>
-          <MenuItem name="BlogWrite" to="/blog/write">写博客</MenuItem>
-          <MenuItem name="BlogList" to="/blog/list">列表</MenuItem>
+          <MenuItem name="BlogWrite" to="/main/blog/write">写博客</MenuItem>
+          <MenuItem name="BlogList" to="/main/blog/list">列表</MenuItem>
         </Submenu>
         <Submenu name="4">
           <template slot="title">

@@ -48,20 +48,11 @@
       }
     },
     mounted(){
-      console.log(this.$route.name);
+      // console.log(this.$route.name);  // 输出当前路由的name值
       this.menu_selected = this.$route.name;
 
     },
     methods:{
-      // select(n){
-      //   // console.log(n); // name 的值
-      //   this.menu_selected = n;
-      //   var subMenu = '';
-      //   if(n.indexOf('-')!=-1){
-      //     subMenu = n.split('-')[0];
-      //     this.openMenu.push(subMenu);
-      //   }
-      // }
     }
   }
 </script>
@@ -71,6 +62,11 @@
     height: 60px;
     border-bottom: 1px solid #ddd;
     background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
   }
   .header .title{
     line-height: 60px;
@@ -79,6 +75,9 @@
 
   .sideMenu{
     height: 100%;
+    position: fixed;
+    top: 60px;
+    left: 0;
   }
   .sideMenu-ul{
     height: 100%;

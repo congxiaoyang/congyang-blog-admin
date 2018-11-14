@@ -2,14 +2,9 @@ html,body{
   height: 100%;
   background-color: #f3f3f4;
 }
-
-.sideMenu{
-  position: fixed;
-  left: 0;
-}
 .container{
   margin-left: 260px;
-  margin-top: 20px;
+  margin-top: 80px;
   margin-right: 20px;
   padding-bottom: 20px;
 }
@@ -26,4 +21,29 @@ html,body{
   border-top: 3px solid #e7eaec;
   border-bottom: 1px solid #e7eaec;
   padding: 14px;
+}
+.btn-group{
+  margin-top: 20px;
+}
+.btn-group-right button{
+  float: right;
+}
+
+.btn-group-right button:nth-of-type(2){
+  margin-right:10px;
+}
+/* 浮动 与 清除浮动的样式 */
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.clearfix:after{
+  display: block;
+  content: ' ';
+  clear: both;
+}
+.clearfix{
+  *zoom: 1;
 }

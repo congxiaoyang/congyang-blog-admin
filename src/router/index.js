@@ -6,13 +6,14 @@ import Index from '@/view/index/Index';
 import Info from '@/view/info/Info';
 import BlogList from '@/view/blog/List';
 import BlogWrite from '@/view/blog/Write';
+import Login from '@/view/login/Login';
 
 Vue.use(Router);
 
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/main/',
       name: 'Main',
       component: Main,
       children:[
@@ -35,7 +36,12 @@ export default new Router({
           component: BlogWrite
         }
       ],
-      redirect:'home'
+      redirect:'/main/home'
     },
+    {
+      path:'/',
+      name:'Login',
+      component: Login
+    }
   ]
 })

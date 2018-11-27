@@ -93,7 +93,7 @@
       },
       getBlogs(page) {
         var _this = this;
-        this.$http.get('/api/getBlogs', {params: {page: page, size: _this.blogPageSize}})
+        this.$http.get(process.env.API_HOST+'getBlogs', {params: {page: page, size: _this.blogPageSize}})
           .then((res) => {
             var res = res.data;
             if (res.status == 'ok') {
@@ -110,7 +110,7 @@
       },
       deleteBlogConfirm(id){
         var _this = this;
-        this.$http.post('/api/removeBlog', _this.$qs.stringify({
+        this.$http.post(process.env.API_HOST+'removeBlog', _this.$qs.stringify({
           id:_this.deleteBlogId
         }))
           .then((res) => {

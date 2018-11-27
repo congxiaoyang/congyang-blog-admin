@@ -66,7 +66,7 @@
         this.$refs[name].validate((valid)=> {
           if(valid){
             _this.publishLoading = true;
-            _this.$http.post('/api/setBlog',_this.$qs.stringify({
+            _this.$http.post(process.env.API_HOST+'setBlog',_this.$qs.stringify({
               title: _this.blogValid.title,
               content: _this.blogValue,
               abstract: _this.blogValid.abstract,

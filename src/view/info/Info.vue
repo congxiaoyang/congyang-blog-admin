@@ -56,7 +56,7 @@
           this.$refs[name].validate((valid) => {
           if (valid) { // 通过验证
             var vm = this;
-            this.$http.post('/api/changeInfo',vm.$qs.stringify({
+            this.$http.post(process.env.API_HOST+'changeInfo',vm.$qs.stringify({
               name: vm.formCustom.name,
               intro: vm.formCustom.intro
             }))
@@ -77,7 +77,7 @@
       }
     },
     mounted:function () {
-      this.$http.get('/api/getInfo',{params:{id:0}})
+      this.$http.get(process.env.API_HOST+'/api/getInfo',{params:{id:0}})
         .then((res)=>{
            var res = res.data;
            this.formCustom.name = res[0].name;

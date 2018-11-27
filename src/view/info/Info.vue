@@ -77,7 +77,7 @@
       }
     },
     mounted:function () {
-      this.$http.get(process.env.API_HOST+'/api/getInfo',{params:{id:0}})
+      this.$http.get(process.env.API_HOST+'getInfo',{params:{id:0}})
         .then((res)=>{
            var res = res.data;
            this.formCustom.name = res[0].name;

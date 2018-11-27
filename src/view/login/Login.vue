@@ -48,7 +48,7 @@
           this.$refs[loginValid].validate((valid => {
             if(valid){
               this.loginBtnLoading = true;
-              _this.$http.post('http://106.12.207.193:3001/login',_this.$qs.stringify({
+              _this.$http.post(process.env.API_HOST+'login',_this.$qs.stringify({
                 username: _this.loginValid.username,
                 pwd:_this.loginValid.pwd
               }))

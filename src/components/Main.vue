@@ -5,7 +5,7 @@
     </div>
     <div class="sideMenu">
       <Menu class="sideMenu-ul" :open-names="openMenu" :theme="menuTheme" :active-name="menu_selected" accordion>
-        <MenuItem name="Index" to="/">
+        <MenuItem name="Index" to="/main/home">
           <Icon type="ios-home" size="18" />
           首页
         </MenuItem>
